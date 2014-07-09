@@ -1,0 +1,17 @@
+﻿@model EventListingApplication.Models.Listing
+
+@{
+    ViewBag.title = @Model.Title;
+}
+
+<h2>@Model.Title</h2>
+
+<img width="800" src="@Url.Action("GetImage","Listing", new { id=Model.ListingID})" />
+
+<p>@Html.DisplayFor(model => model.Description)</p>
+<p>@Html.DisplayFor(model => model.UserName)</p>
+<p>
+    @Html.DisplayNameFor(model => model.UserName):
+    @Html.DisplayFor(model => model.UserName)
+</p>
+<p>@Html.ActionLink("Back to List","Index")</p>

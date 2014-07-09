@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "All Events";
+}
+
+<h2>All Events</h2>
+
+
+
+<p>
+    @Html.ActionLink("Add an Event", "Create", "Listing")
+</p>
+
+@Html.Action("_ListingGallery", "Listing")
+    

@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Welcome to Event Listing";
+}
+
+<h2>Welcome to Event Listing! Use this site to share your recommended events.</h2>
+
+<h2>Latest Events:</h2>
+
+
+@Html.Action("_ListingGallery", "Listing", new { number = 3})
+
