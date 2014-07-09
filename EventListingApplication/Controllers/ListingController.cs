@@ -42,6 +42,7 @@ namespace EventListingApplication.Controllers
             return View("Create", listings);
         }
 
+        // This is a comment
         [HttpPost]
         public ActionResult Create(Listing listing, HttpPostedFileBase image)
         {
