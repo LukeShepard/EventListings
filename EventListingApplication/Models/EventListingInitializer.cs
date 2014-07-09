@@ -51,8 +51,8 @@ namespace EventListingApplication.Models
                 }
             };
 
-            comments.ForEach(s => context.Comments.Add(s));
-            context.SaveChanges();
+           // comments.ForEach(s => context.Comments.Add(s));
+           // context.SaveChanges();
 
         }
 

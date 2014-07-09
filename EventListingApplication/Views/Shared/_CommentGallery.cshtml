@@ -1,0 +1,9 @@
+﻿@model IEnumerable<EventListingApplication.Models.Comment>
+
+@foreach (var item in Model)
+{
+    <h3>"@item.UserComments"</h3>
+   
+    @Html.ActionLink("Display","Display", new { id = item.ListingID})
+
+}

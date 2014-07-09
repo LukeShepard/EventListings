@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Comments";
+}
+
+<h2>Add a Comment</h2>
+
+<p>
+    @Html.ActionLink("Add a Comment", "AddComment","Comment")
+</p>
+
+@Html.Action("_CommentGallery","Comment")

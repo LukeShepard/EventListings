@@ -1,0 +1,19 @@
+﻿@model EventListingApplication.Models.Comment
+@{
+    ViewBag.Title = "AddComments";
+}
+
+<h2>Add Your Own Comments</h2>
+
+@using (Html.BeginForm("AddComments", "Comment", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+    
+    <h2>Add a Comment</h2>
+<p>
+    @Html.EditorFor(model => model.UserComments)
+</p>
+    
+   @Html.ActionLink("Enter Comment","Display/1","Listing")
+    
+}

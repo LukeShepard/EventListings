@@ -6,7 +6,7 @@
 
 <h2>@Model.Title</h2>
 
-<img width="800" src="@Url.Action("GetImage","Listing", new { id=Model.ListingID})" />
+<img width="400" src="@Url.Action("GetImage","Listing", new { id=Model.ListingID})" />
 
 <p>@Html.DisplayFor(model => model.Description)</p>
 <p>@Html.DisplayFor(model => model.UserName)</p>
@@ -14,4 +14,20 @@
     @Html.DisplayNameFor(model => model.UserName):
     @Html.DisplayFor(model => model.UserName)
 </p>
-<p>@Html.ActionLink("Back to List","Index")</p>
+
+<h2>Comments</h2>
+<p>
+  @Html.DisplayFor(model => model.UserComments)
+</p>
+
+
+<p>
+    @Html.ActionLink("Add a comment","Create","Comment")
+
+
+    <p>@Html.ActionLink("Back to List","Index")</p>
+    </p>
+
+
+
+

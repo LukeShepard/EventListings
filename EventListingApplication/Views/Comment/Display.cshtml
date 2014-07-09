@@ -1,0 +1,13 @@
+﻿@model EventListingApplication.Models.Comment
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Comment Section</h2>
+
+<h2>@Html.DisplayFor(model => model.UserComments)</h2>
+
+<p>
+    @Html.ActionLink("Back to Display","AddComments")
+</p>

@@ -22,9 +22,10 @@ namespace EventListingApplication.Models
         public string ImageMimeType { get; set; }
 
         [DataType(DataType.MultilineText)]
+        [Required(ErrorMessage = "Must Have A discription.")]
         public string Description { get; set; }
 
-
+       
 
 
         [DataType(DataType.DateTime)]
@@ -34,6 +35,8 @@ namespace EventListingApplication.Models
 
         [DataType(DataType.Text)]
         public string UserName { get; set; }
+
+
 
         public virtual List<Comment> Comments { get; set; }
 

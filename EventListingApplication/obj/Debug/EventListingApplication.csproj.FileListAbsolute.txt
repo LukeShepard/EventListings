@@ -27,3 +27,32 @@ c:\examples\eventlistapp\EventListingApplication\EventListingApplication\obj\Deb
 c:\examples\eventlistapp\EventListingApplication\EventListingApplication\bin\EntityFramework.dll
 c:\examples\eventlistapp\EventListingApplication\EventListingApplication\bin\EntityFramework.xml
 c:\examples\eventlistapp\EventListingApplication\EventListingApplication\obj\Debug\EventListingApplication.csprojResolveAssemblyReference.cache
+C:\GitHub Repos\EventListings\EventListingApplication\bin\EventListingApplication.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\EventListingApplication.pdb
+C:\GitHub Repos\EventListings\EventListingApplication\bin\EntityFramework.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\Newtonsoft.Json.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Net.Http.Formatting.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Helpers.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Http.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Http.WebHost.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Mvc.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Razor.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.WebPages.Deployment.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.WebPages.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.WebPages.Razor.dll
+C:\GitHub Repos\EventListings\EventListingApplication\bin\EntityFramework.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\Newtonsoft.Json.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Net.Http.Formatting.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Helpers.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Http.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Http.WebHost.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Mvc.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.Razor.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.WebPages.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.WebPages.Deployment.xml
+C:\GitHub Repos\EventListings\EventListingApplication\bin\System.Web.WebPages.Razor.xml
+C:\GitHub Repos\EventListings\EventListingApplication\obj\Debug\EventListingApplication.csprojResolveAssemblyReference.cache
+C:\GitHub Repos\EventListings\EventListingApplication\obj\Debug\EventListingApplication.dll
+C:\GitHub Repos\EventListings\EventListingApplication\obj\Debug\EventListingApplication.pdb
