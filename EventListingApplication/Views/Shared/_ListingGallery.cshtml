@@ -2,20 +2,28 @@
 
 @foreach (var item in Model)
 {
+ <div class="listing-index-card">
     <h3>"@item.Title"</h3>
-    if (item.PhotoFile != null)
-    {
-        <img width="200" src="@Url.Action("GetImage", "Listing", new{ id = item.ListingID })" />
-    }
+
+    
+    
+        <img class="listing-index-card-img" src="@Url.Action("GetImage", "Listing", new{ id = item.ListingID })" />
+    
+     <div class ="listing-metadata">
     <p>
-        Created By:
-        @Html.DisplayFor(model => item.UserName)
+        <span class="display-label">
+             Created By:
+             @Html.DisplayFor(model => item.UserName)
+        </span>
     </p>
      <p>
-        Created On:
-        @Html.DisplayFor(model => item.CreatedDate)
+         <span class="display-label">
+             Created On:
+             @Html.DisplayFor(model => item.CreatedDate)
+         </span>
     </p>
     @Html.ActionLink("Display","Display", new { id = item.ListingID})
-
+         </div>
+ </div>
 }
 

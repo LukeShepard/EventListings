@@ -30,6 +30,7 @@ namespace EventListingApplication.Controllers
             var listing = context.Listings.Find(id);
             if (listing == null)
                 return HttpNotFound();
+            //listing.Comments = context.Comments.Find(1).ToList();
             return View("Display", listing);
         }
 
@@ -100,5 +101,6 @@ namespace EventListingApplication.Controllers
             return PartialView("_ListingGallery", listings);
         }
 
+     
     }
 }
