@@ -2,8 +2,28 @@
 
 @foreach (var item in Model)
 {
-    <h3>"@item.UserComments"</h3>
-   
-    @Html.ActionLink("Display","Display", new { id = item.CommentID})
 
+    <h3>"@item.Subject"</h3>
+   
+ <div class="listing-comment">
+    <div class ="comment-metadata">
+    <p>   
+        <span class="display-field">
+            @Html.DisplayFor(model => item.Username)
+        </span>
+    </p> 
+    <p>
+         
+          <span class="display-field">
+           @Html.DisplayFor(model => item.Subject)
+        </span>
+    </p> 
+        <p>
+            <span class="display-field">
+                @Html.DisplayFor(model => item.Body)
+            </span>
+        </p>
+    @Html.ActionLink("Display","Listing", new { id = item.CommentID})
+         </div>
+  </div>
 }

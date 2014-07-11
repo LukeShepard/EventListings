@@ -4,16 +4,38 @@
 }
 
 <h2>Add Your Own Comments</h2>
+@Html.ValidationSummary(true)
 
-@using (Html.BeginForm("AddComments", "Comment", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Create", "Comment", FormMethod.Post))
 {
-    @Html.ValidationSummary(true)
+
     
     <h2>Add a Comment</h2>
-<p>
-    @Html.EditorFor(model => model.UserComments)
-</p>
     
-   @Html.ActionLink("Enter Comment","Display/1","Listing")
+    @Html.HiddenFor(model => model.ListingID)
+    
+   <div class="add-comment-box" style="color:lightgreen">
+       <h5>From:
+       @Html.EditorFor(model => model.Username) 
+           </h5>
+   </div>
+    
+    <div class="add-comment-box" style="color:lightgreen">
+        <h5>Subject:
+        @Html.EditorFor(model => model.Subject)
+        </h5>
+    </div>
+<div class="add-comment-box" style="color:lightgreen">
+    <h5>Enter your comment here</h5> 
+        @Html.EditorFor(model => model.Body)
+
+    <div>
+        <input type="submit" value="Add Comment" />
+        </div>
+        
+</div>
+
+    
+   
     
 }

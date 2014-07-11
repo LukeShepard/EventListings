@@ -6,22 +6,27 @@
     <h3>"@item.Title"</h3>
 
     
-    
+    @if(item.PhotoFile != null)
+    {
         <img class="listing-index-card-img" src="@Url.Action("GetImage", "Listing", new{ id = item.ListingID })" />
-    
+    }
      <div class ="listing-metadata">
     <p>
         <span class="display-label">
              Created By:
-             @Html.DisplayFor(model => item.UserName)
         </span>
-    </p>
-     <p>
+        <span class="display-field">
+            @Html.DisplayFor(model => item.UserName)
+        </span>
+    </p> 
+    <p>
          <span class="display-label">
-             Created On:
-             @Html.DisplayFor(model => item.CreatedDate)
+          Created On:  
          </span>
-    </p>
+          <span class="display-field">
+           @Html.DisplayFor(model => item.CreatedDate)
+        </span>
+    </p> 
     @Html.ActionLink("Display","Display", new { id = item.ListingID})
          </div>
  </div>

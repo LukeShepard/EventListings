@@ -9,24 +9,44 @@
 
 <img width="400" src="@Url.Action("GetImage","Listing", new { id=Model.ListingID})" />
 
-<p>@Html.DisplayFor(model => model.Description)</p>
-<p>@Html.DisplayFor(model => model.UserName)</p>
-<p>
+
+<div class="listing-description">@Html.DisplayFor(model => model.Description)</div>
+    
+
+
+<div class ="display-label">
+<span>
     @Html.DisplayNameFor(model => model.UserName):
+    </span>
+    </div>
+
+<span>
     @Html.DisplayFor(model => model.UserName)
-</p>
+</span>
+   
 
 <h2>Comments</h2>
 
 
+   <div class="listing-comment">
+    <div class="listing-from">     
+            From: Luke
+    </div>
+    <div class="listing-subject">
+       Subject: Test
+    </div>
+    <div class="listing-comment-body"> 
+        This is a test.
+    </div>
+     @Html.Action("_CommentGallery", "Comment")
+   </div>
 
-<p>
-    @Html.ActionLink("Add a comment","Create","Comment")
+<div class="add-comment-box">
 
+    @Html.ActionLink("Add a comment", "Create", "Comment", new { parent=Model.ListingID }, null)
+    </div>
 
     <p>@Html.ActionLink("Back to List","Index")</p>
-    </p>
-<link type="text/css" rel="stylesheet" href="~/Content/EventListingStyles.css" />
 
 
 

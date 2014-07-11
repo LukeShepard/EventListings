@@ -5,15 +5,26 @@
 <!DOCTYPE html>
 
 <html>
+ 
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>_@ViewBag.Title</title>
+    <title>@ViewBag.Title</title>
+    <link type="text/css" rel="stylesheet" href="~/Content/EventListingStyles.css" />
 </head>
 <body>
+    
     <h1 class="site-page-title">Event Listings Sharing</h1>
     <div class="clear-floats"/>
      <div id="topmenu">
-         @Html.MvcSiteMap().Menu(false,true,true)
+         <div class="topmenulink">
+        <a href="~/Home/Index">Home Page</a>
+             </div>
+         <div class="topmenulink">
+             <a href="~/Listing/Index">Events</a>
+         </div>
+         <div class="topmenulink">
+             <a href="~/Listing/Create">Create an event</a>
+         </div>
      </div>   
     <div id="breadcrumb">
         Current Location: @Html.MvcSiteMap().SiteMapPath()
@@ -21,7 +32,6 @@
     <div>
         @RenderBody()
     </div>
-    <link type="text/css" rel="stylesheet" href="~/Content/EventListingStyles.css" />
    
 </body>
 </html>

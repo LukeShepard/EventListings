@@ -29,40 +29,36 @@ namespace EventListingApplication.Controllers
             return View("Display", uComments);
         }
 
-        public ActionResult Create()
+        public ActionResult Create(int parent)
         {
             var uComments = new Comment()
             {
-                CreatedDate = DateTime.Now
+                ListingID = parent//,
+                //CreatedDate = DateTime.Now
             };
             return View("AddComments", uComments);
         }
 
         // This is a comment
         [HttpPost]
-        public ActionResult Create(Comment uComments, HttpPostedFileBase image)
+        public ActionResult Create(Comment uComments)
         {
-            uComments.CreatedDate = DateTime.Now;
+            //uComments.CreatedDate = DateTime.Now;
 
-            if (!ModelState.IsValid) return View("Create", uComments);
-
-            if (image != null)
-            {
-                uComments.ImageMimeType = image.ContentType;
-                uComments.PhotoFile = new byte[image.ContentLength];
-                image.InputStream.Read(uComments.PhotoFile, 0, image.ContentLength);
-            }
+            if (!ModelState.IsValid)
+                return View("AddComments", uComments);
+            
             context.Comments.Add(uComments);
             context.SaveChanges();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Display", "Listing", new { id = uComments.ListingID });
         }
 
         public ActionResult Delete(int id)
         {
-            var uComments= context.Comments.Find(id);
-            if (uComments == null) return HttpNotFound();
-            return View("Delete", uComments);
+            var Comments= context.Comments.Find(id);
+            if (Comments == null) return HttpNotFound();
+            return View("Delete", Comments);
         }
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
@@ -83,7 +79,7 @@ namespace EventListingApplication.Controllers
             else
             {
                 uComments = (from p in context.Comments
-                            orderby p.CreatedDate descending
+                            //orderby p.CreatedDate descending
                             select p).Take(number).ToList();
             }
             return PartialView("_CommentGallery", uComments);
